@@ -8,7 +8,6 @@ FIND_PACKAGE("printf" REQUIRED)
 
 SET(application_SRCS main.c
                      application_descriptors.c)
-SET(deps "${deps} hal-uc-core hal-uc-gpio hal-uc-uart hal-uc-id msp430-usbapi") 
+SET(deps "${deps} hal-uc-core hal-uc-gpio hal-uc-uart hal-uc-id") 
 SET(deps "${deps} modbus ucdm-if time-if rand watchdog")
-SET(EXTRA_LINKER_FLAGS "-T ${CMAKE_SOURCE_DIR}/asp/bsp/hal/uc/impl/usb-impl/USB_API/msp430USB.ld")
 ADD_PLATFORM_EXECUTABLE(firmware ${deps} ${application_SRCS})
