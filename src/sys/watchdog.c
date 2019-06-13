@@ -2,7 +2,7 @@
 
 
 #include "watchdog.h"
-#include "bsp/hal/uc/core.h"
+#include "hal/uc/core.h"
 #include <time/cron.h>
 
 static cron_job_t _watchdog_service;

@@ -1,9 +1,9 @@
 /* 
-   Copyright 2015 Quazar Technologies Pvt. Ltd.
-   Copyright 2015 Chintalagiri Shashank
+   Copyright (c) 
+     (c) 2019 Chintalagiri Shashank, Quazar Technologies Pvt. Ltd.
    
    This file is part of
-   Embedded bootstraps : Subsystem Interfaces
+   Embedded bootstraps : uC Support Package
    
    This library is free software: you can redistribute it and/or modify
    it under the terms of the GNU Lesser General Public License as published
@@ -20,28 +20,19 @@
 */
 
 /**
- * @file time.h
- * @brief Time Library Interface
- * 
+ * @file asp/hardware.h
+ * @brief Highest level include for Hardware definitions.
+ *
+ * This file, and the file hierarchy that it includes, should define
+ * all available capabilities of the entirety of the hardware, 
+ * independent of the finer details of the application.
+ * * 
  */
 
-#ifndef TIME_IF_H
-#define TIME_IF_H
+#ifndef ASP_HARDWARE_H
+#define ASP_HARDWARE_H
 
-#include "app/application.h"
-#include "hal/uc.h"
-#include <time/time.h>
-#include <time/sync.h>
-#include <time/cron.h>
-
-uint16_t app_tm_init(uint16_t ucdm_next_address);
-
-#if APP_ENABLE_SYSTICK == 1
-    void systick_init(void);
-#endif
-    
-#if APP_ENABLE_RTC == 1
-    uint8_t time_get_rtc_time(tm_real_t * rtime_target);
-#endif
+#include "bsp/board.h"
+#include "bsp/uc_pum.h"
 
 #endif

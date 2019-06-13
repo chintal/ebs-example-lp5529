@@ -4,7 +4,6 @@
 #define SYS_RAND_H
 
 #include "app/application.h"
-#include "bsp/hal/uc/types.h"
 
 #define RAND_GENERATOR_ENTROPY      0
 #define RAND_GENERATOR_RAND         1

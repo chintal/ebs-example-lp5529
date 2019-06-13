@@ -1,6 +1,6 @@
-[submodule "src/bsp"]
-	path = src/bsp
-	url = git@github.com:chintal/ebs-bsp-msp430-lpf5529.git
 [submodule "src/sys/modbus"]
 	path = src/sys/modbus
 	url = git@github.com:chintal/ebs-lib-modbus.git
+[submodule "src/asp/bsp"]
+	path = src/asp/bsp
+	url = git@github.com:chintal/ebs-bsp-msp430-lpf5529.git

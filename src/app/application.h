@@ -47,27 +47,22 @@
 #define APPLICATION_H
 
 #include "app/config.h"
-#include "bsp/hal/uc/types.h"
+#include <platform/types.h>
 
-#define APP_ENABLE_BCIF         0
+#define APP_ENABLE_BCIF         1
 #define APP_ENABLE_UCDM         1
 
 /**
- * @name Modbus Interface Configuration
- */
-/**@{*/
-    /**
-    * @name Modbus Interface Configuration
-    */
-    /**@{*/ 
-    #define APP_ENABLE_MODBUS               1
-    #define MODBUS_PLUGGABLE_TRANSPORTS     1
-    #define MODBUS_ENABLE_TRANSPORT_UART    1
-    #define MODBUS_TRANSPORT_UART_INTFNUM   1
-    #define MODBUS_ENABLE_TRANSPORT_USBCDC  1
-    #define MODBUS_TRANSPORT_USBCDC_INTFNUM 1
-    #define APP_MODBUS_TRANSPORT            MODBUS_USBCDC
-    /**@}*/ 
+* @name Modbus Interface Configuration
+*/
+/**@{*/ 
+#define APP_ENABLE_MODBUS               1
+#define MODBUS_PLUGGABLE_TRANSPORTS     1
+#define MODBUS_ENABLE_TRANSPORT_UART    1
+#define MODBUS_TRANSPORT_UART_INTFNUM   1
+#define MODBUS_ENABLE_TRANSPORT_USBCDC  1
+#define MODBUS_TRANSPORT_USBCDC_INTFNUM 1
+#define APP_MODBUS_TRANSPORT            MODBUS_USBCDC
 /**@}*/ 
 
 /**
@@ -87,7 +82,7 @@
     #define APP_SYSTICK_TIMER_INTFNUM 1
     #define APP_SYSTICK_FREQ_Hz       1000
 
-    #define APP_ENABLE_RTC            1
+    #define APP_ENABLE_RTC            0
     #define APP_ENABLE_CRON           1
 /**@}*/
 
@@ -107,8 +102,7 @@
 #define uC_UART1_ENABLED              1
 #define uC_UART1_BAUD                 256000
 
-#include "bsp/board.h"
-#include "bsp/uc_pum.h"
+#include "asp/hardware.h"
 #include "devicemap.h"
 
 #endif

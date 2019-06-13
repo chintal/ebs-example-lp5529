@@ -36,7 +36,7 @@
 #define BCIFACE_H
 
 #include "app/application.h"
-#include "bsp/hal/uc.h"
+#include "hal/uc.h"
 
 #if BOARD_HAS_BCIFACE == 1 && APP_ENABLE_BCIF == 1
     /**

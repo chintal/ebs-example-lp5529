@@ -1,8 +1,8 @@
 
 #include "application.h"
 #include "application_descriptors.h"
-#include "bsp/hal/uc.h"
-#include "bsp/drivers/led/led.h"
+#include "hal/uc.h"
+#include "drivers/led/led.h"
 #include "sys/sys.h"
 
 #include "sys/modbus/modbus.h"

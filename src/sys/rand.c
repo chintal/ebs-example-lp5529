@@ -1,7 +1,7 @@
 
 
 #include "rand.h"
-#include "bsp/hal/uc/entropy.h"
+#include "hal/uc/entropy.h"
 #include <stdlib.h>
 #include <prbs/prbs.h>
 #include <crypto/entropium/entropium.h>

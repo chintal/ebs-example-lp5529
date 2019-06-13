@@ -5,7 +5,7 @@
 #include <ucdm/descriptor.h>
 #include <time/time.h>
 #include "sys/modbus/modbus.h"
-#include "bsp/hal/uc/id.h"
+#include "hal/uc/id.h"
 
 
 const descriptor_vendor_t descriptor_vendor = {
