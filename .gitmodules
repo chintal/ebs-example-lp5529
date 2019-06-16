@@ -1,9 +1,12 @@
 [submodule "src/sys/modbus"]
 	path = src/sys/modbus
 	url = git@github.com:chintal/ebs-lib-modbus.git
+	branch = master
 [submodule "src/asp/bsp"]
 	path = src/asp/bsp
 	url = git@github.com:chintal/ebs-bsp-msp430-lpf5529.git
+	branch = master
 [submodule "src/hal/uc"]
 	path = src/hal/uc
 	url = git@github.com:chintal/ebs-hal-uc.git
+	branch = master
