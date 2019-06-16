@@ -33,6 +33,5 @@
 #define ASP_HARDWARE_H
 
 #include "bsp/board.h"
-#include "bsp/uc/uc_pum.h"
 
 #endif

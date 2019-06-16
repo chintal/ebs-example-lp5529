@@ -70,8 +70,7 @@
  */
 /**@{*/ 
     #define APP_ENTROPY_INTFNUM       0
-    #define APP_ENABLE_RAND           1
-    #define APP_RAND_GENERATOR        1
+    //#define RAND_GENERATOR          1
 /**@}*/
 
 /**
@@ -86,6 +85,13 @@
     #define APP_ENABLE_CRON           1
 /**@}*/
 
+/**
+* @name SPI Core Interface Configuration
+*/
+/**@{*/ 
+    #define APP_SUPPORT_SPI_SELECT_PIO      0
+    #define APP_SUPPORT_SPI_SELECT_FUNC     1
+/**@}*/
 
 // Core HAL Configuration. Should be calculated instead.
 #define uC_USBCDC_ENABLED             1
@@ -101,6 +107,12 @@
 #define uC_UART0_ENABLED              0
 #define uC_UART1_ENABLED              1
 #define uC_UART1_BAUD                 256000
+
+#define uC_SPI0_ENABLED               0
+#define uC_SPI1_ENABLED               1
+#define uC_SPI2_ENABLED               0
+#define uC_SPI3_ENABLED               0
+
 
 #include "asp/hardware.h"
 #include "devicemap.h"

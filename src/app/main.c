@@ -23,6 +23,7 @@ static void deferred_exec(void){
     #if APP_ENABLE_CRON == 1
         tm_cron_poll();
     #endif
+    spi_reactor();
 }
 
 
@@ -34,6 +35,7 @@ static void _initialize_interrupts(void){
     __uart_handler_inclusion = 1;
     __usb_handler_inclusion = 1;
     __timer_handler_inclusion = 1;
+    __spi_handler_inclusion = 1;
 }
 
 
@@ -47,6 +49,8 @@ int main(void)
     power_set_full();
     clock_set_default();
     global_interrupt_enable();
+    
+    spi_init();
     
     usb_init();
     id_init();
