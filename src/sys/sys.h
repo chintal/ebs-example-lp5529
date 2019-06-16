@@ -54,8 +54,7 @@
 #ifndef SUBSYSTEMS_H
 #define SUBSYSTEMS_H
 
-#include "time.h"
-#include "rand.h"
+#include "time_if.h"
 #include "bciface.h"
 
 #endif
