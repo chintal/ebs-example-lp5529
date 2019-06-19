@@ -91,6 +91,8 @@
 /**@{*/ 
     #define APP_SUPPORT_SPI_SELECT_PIO      0
     #define APP_SUPPORT_SPI_SELECT_FUNC     1
+    #define APP_SUPPORT_SPI_CTL_CLKSHAPE    1
+    #define APP_SUPPORT_SPI_CTL_CLKFREQ     1
 /**@}*/
 
 // Core HAL Configuration. Should be calculated instead.
