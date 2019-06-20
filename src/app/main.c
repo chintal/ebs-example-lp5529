@@ -3,6 +3,7 @@
 #include "application_descriptors.h"
 #include "hal/uc.h"
 #include "drivers/led/led.h"
+#include "drivers/sharp-memlcd/memlcd.h"
 #include "sys/sys.h"
 
 #include "sys/modbus/modbus.h"
@@ -68,6 +69,10 @@ int main(void)
     #if APP_ENABLE_MODBUS == 1
         modbus_init(DMAP_MODBUS_BASE_ADDRESS, 
                     MODBUS_DEFAULT_DEVICE_ADDRESS);
+    #endif
+        
+    #if APP_ENABLE_SHARP_MEMLCD == 1
+        sharp_memlcd_init();
     #endif
     
     while(1){

@@ -10,3 +10,6 @@
 	path = src/hal/uc
 	url = git@github.com:chintal/ebs-hal-uc.git
 	branch = master
+[submodule "src/asp/430boost-sharp96/drivers/sharp-memlcd"]
+	path = src/asp/430boost-sharp96/drivers/sharp-memlcd
+	url = git@github.com:chintal/ebs-driver-sharp-memlcd.git

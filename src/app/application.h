@@ -49,40 +49,40 @@
 #include "app/config.h"
 #include <platform/types.h>
 
-#define APP_ENABLE_BCIF         1
-#define APP_ENABLE_UCDM         1
+#define APP_ENABLE_BCIF                 1
+#define APP_ENABLE_UCDM                 1
 
 /**
 * @name Modbus Interface Configuration
 */
 /**@{*/ 
-#define APP_ENABLE_MODBUS               1
-#define MODBUS_PLUGGABLE_TRANSPORTS     1
-#define MODBUS_ENABLE_TRANSPORT_UART    1
-#define MODBUS_TRANSPORT_UART_INTFNUM   1
-#define MODBUS_ENABLE_TRANSPORT_USBCDC  1
-#define MODBUS_TRANSPORT_USBCDC_INTFNUM 1
-#define APP_MODBUS_TRANSPORT            MODBUS_USBCDC
+    #define APP_ENABLE_MODBUS               1
+    #define MODBUS_PLUGGABLE_TRANSPORTS     1
+    #define MODBUS_ENABLE_TRANSPORT_UART    1
+    #define MODBUS_TRANSPORT_UART_INTFNUM   1
+    #define MODBUS_ENABLE_TRANSPORT_USBCDC  1
+    #define MODBUS_TRANSPORT_USBCDC_INTFNUM 1
+    #define APP_MODBUS_TRANSPORT            MODBUS_USBCDC
 /**@}*/ 
 
 /**
  * @name Entropy & Random Configuration
  */
 /**@{*/ 
-    #define APP_ENTROPY_INTFNUM       0
-    //#define RAND_GENERATOR          1
+    #define APP_ENTROPY_INTFNUM             0
+    //#define RAND_GENERATOR                1
 /**@}*/
 
 /**
  * @name Time Configuration
  */
 /**@{*/ 
-    #define APP_ENABLE_SYSTICK        1
-    #define APP_SYSTICK_TIMER_INTFNUM 1
-    #define APP_SYSTICK_FREQ_Hz       1000
+    #define APP_ENABLE_SYSTICK              1
+    #define APP_SYSTICK_TIMER_INTFNUM       1
+    #define APP_SYSTICK_FREQ_Hz             1000
 
-    #define APP_ENABLE_RTC            0
-    #define APP_ENABLE_CRON           1
+    #define APP_ENABLE_RTC                  0
+    #define APP_ENABLE_CRON                 1
 /**@}*/
 
 /**
@@ -95,25 +95,34 @@
     #define APP_SUPPORT_SPI_CTL_CLKFREQ     1
 /**@}*/
 
+/**
+* @name Sharp Memory LCD Configuration
+*/
+/**@{*/ 
+    #define APP_ENABLE_SHARP_MEMLCD         1
+    #define SHARP_MEMLCD_SWCOMINV           1
+/**@}*/
+
+
 // Core HAL Configuration. Should be calculated instead.
-#define uC_USBCDC_ENABLED             1
-#define uC_USBHID_ENABLED             0
-#define uC_USBMSC_ENABLED             0
-#define uC_USBPHDC_ENABLED            0
+#define uC_USBCDC_ENABLED               1
+#define uC_USBHID_ENABLED               0
+#define uC_USBMSC_ENABLED               0
+#define uC_USBPHDC_ENABLED              0
 
-#define uC_TIMER0_ENABLED             1
+#define uC_TIMER0_ENABLED               1
 
-#define uC_TIMER1_ENABLED             1
-#define uC_TIMER1_TOP_IRQ_HANDLER     time_systick_handler
+#define uC_TIMER1_ENABLED               1
+#define uC_TIMER1_TOP_IRQ_HANDLER       time_systick_handler
 
-#define uC_UART0_ENABLED              0
-#define uC_UART1_ENABLED              1
-#define uC_UART1_BAUD                 256000
+#define uC_UART0_ENABLED                0
+#define uC_UART1_ENABLED                1
+#define uC_UART1_BAUD                   256000
 
-#define uC_SPI0_ENABLED               0
-#define uC_SPI1_ENABLED               1
-#define uC_SPI2_ENABLED               0
-#define uC_SPI3_ENABLED               0
+#define uC_SPI0_ENABLED                 0
+#define uC_SPI1_ENABLED                 1
+#define uC_SPI2_ENABLED                 0
+#define uC_SPI3_ENABLED                 0
 
 
 #include "asp/hardware.h"
