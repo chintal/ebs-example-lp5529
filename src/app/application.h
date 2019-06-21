@@ -91,8 +91,7 @@
 /**@{*/ 
     #define APP_SUPPORT_SPI_SELECT_PIO      0
     #define APP_SUPPORT_SPI_SELECT_FUNC     1
-    #define APP_SUPPORT_SPI_CTL_CLKSHAPE    1
-    #define APP_SUPPORT_SPI_CTL_CLKFREQ     1
+    #define APP_SUPPORT_SPI_CTL             1
 /**@}*/
 
 /**
@@ -100,7 +99,10 @@
 */
 /**@{*/ 
     #define APP_ENABLE_SHARP_MEMLCD         1
-    #define SHARP_MEMLCD_SWCOMINV           1
+    #define SHARP_MEMLCD_COMINV_SW          1
+    #define SHARP_MEMLCD_COMINV_AUTO        1
+    #define SHARP_MEMLCD_MANAGER            1
+    #define SHARP_MEMLCD_FRAMEBUFFER        0
 /**@}*/
 
 
