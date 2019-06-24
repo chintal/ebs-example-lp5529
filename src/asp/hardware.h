@@ -26,7 +26,7 @@
  * This file, and the file hierarchy that it includes, should define
  * all available capabilities of the entirety of the hardware, 
  * independent of the finer details of the application.
- * * 
+ *  
  */
 
 #ifndef ASP_HARDWARE_H
@@ -38,15 +38,20 @@
 * @name Sharp Memory LCD Hardware Configuration
 */
 /**@{*/ 
-    #define SHARP_MEMLCD_PANEL              SHARP_MEMLCD_LS013B4DN04
-    #define SHARP_MEMLCD_SPI_INTFNUM        1
-    #define SHARP_MEMLCD_SPI_BASE_FREQ      uC_SPI1_SCLK_BASE_FREQ
-    #define SHARP_MEMLCD_SPI_CS_PORT        6
-    #define SHARP_MEMLCD_SPI_CS_PIN         _BV(6)
-    #define SHARP_MEMLCD_ENABLE_PORT        1
-    #define SHARP_MEMLCD_ENABLE_PIN         _BV(6)
-    #define SHARP_MEMLCD_COMINV_PORT        2
-    #define SHARP_MEMLCD_COMINV_PIN         _BV(0)
+    #define SHARP_MEMLCD_PANEL                  SHARP_MEMLCD_LS013B4DN04
+    #define SHARP_MEMLCD_SPI_INTFNUM            1
+    #define SHARP_MEMLCD_SPI_BASE_FREQ          uC_SPI1_SCLK_BASE_FREQ
+    #define SHARP_MEMLCD_SPI_CS_PORT            6
+    #define SHARP_MEMLCD_SPI_CS_PIN             _BV(6)
+    #define SHARP_MEMLCD_ENABLE_PORT            1
+    #define SHARP_MEMLCD_ENABLE_PIN             _BV(6)
+    #define SHARP_MEMLCD_COMINV_PORT            2
+    #define SHARP_MEMLCD_COMINV_PIN             _BV(0)
+    #define SHARP_MEMLCD_COMINV_INTFNUM         1
+    #define SHARP_MEMLCD_COMINV_INTFCHN         1
+    #define SHARP_MEMLCD_COMINV_CLKSOURCE_FREQ  uC_TIMER1_CLKSOURCE_FREQ
+    #define SHARP_MEMLCD_COMINV_CLK_PRESCALER   24
+    #define SHARP_MEMLCD_COMINV_CLK_PRESCALER_B TIMER_PRESCALER_DIV24
 /**@}*/
 
 #endif

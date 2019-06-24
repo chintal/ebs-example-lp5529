@@ -69,7 +69,7 @@
  * @name Entropy & Random Configuration
  */
 /**@{*/ 
-    #define APP_ENTROPY_INTFNUM             0
+    #define APP_ENTROPY_INTFNUM             1
     //#define RAND_GENERATOR                1
 /**@}*/
 
@@ -78,7 +78,7 @@
  */
 /**@{*/ 
     #define APP_ENABLE_SYSTICK              1
-    #define APP_SYSTICK_TIMER_INTFNUM       1
+    #define APP_SYSTICK_TIMER_INTFNUM       2
     #define APP_SYSTICK_FREQ_Hz             1000
 
     #define APP_ENABLE_RTC                  0
@@ -99,8 +99,8 @@
 */
 /**@{*/ 
     #define APP_ENABLE_SHARP_MEMLCD         1
-    #define SHARP_MEMLCD_COMINV_SW          1
-    #define SHARP_MEMLCD_COMINV_AUTO        1
+    #define SHARP_MEMLCD_COMINV             SHARP_MEMLCD_COMINV_HW_TIMER
+    #define SHARP_MEMLCD_IMAGE_WRITER       0
     #define SHARP_MEMLCD_MANAGER            1
     #define SHARP_MEMLCD_FRAMEBUFFER        0
 /**@}*/
@@ -112,10 +112,12 @@
 #define uC_USBMSC_ENABLED               0
 #define uC_USBPHDC_ENABLED              0
 
-#define uC_TIMER0_ENABLED               1
-
+#define uC_TIMER0_ENABLED               0
 #define uC_TIMER1_ENABLED               1
-#define uC_TIMER1_TOP_IRQ_HANDLER       time_systick_handler
+#define uC_TIMER2_ENABLED               1
+#define uC_TIMER3_ENABLED               0
+
+#define uC_TIMER2_TOP_IRQ_HANDLER       time_systick_handler
 
 #define uC_UART0_ENABLED                0
 #define uC_UART1_ENABLED                1
