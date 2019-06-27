@@ -49,8 +49,21 @@
 #include "app/config.h"
 #include <platform/types.h>
 
-#define APP_ENABLE_BCIF                 1
-#define APP_ENABLE_UCDM                 1
+/**
+* @name Backchannel Interface Configuration
+*/
+/**@{*/ 
+    #define APP_ENABLE_BCIF                 1
+    #define APP_BCIFACE_USE_USBCDC      ....1
+/**@}*/ 
+
+/**
+* @name UCDM Configuration
+*/
+/**@{*/ 
+    #define APP_ENABLE_UCDM                 1
+    #define DMAP_MAX_REGISTERS              64
+/**@}*/ 
 
 /**
 * @name Modbus Interface Configuration
@@ -69,6 +82,7 @@
  * @name Entropy & Random Configuration
  */
 /**@{*/ 
+    #define APP_ENABLE_ENTROPY              1
     #define APP_ENTROPY_INTFNUM             1
     //#define RAND_GENERATOR                1
 /**@}*/
@@ -107,10 +121,14 @@
 
 
 // Core HAL Configuration. Should be calculated instead.
+
 #define uC_USBCDC_ENABLED               1
 #define uC_USBHID_ENABLED               0
 #define uC_USBMSC_ENABLED               0
 #define uC_USBPHDC_ENABLED              0
+
+#define uC_UART0_ENABLED                0
+#define uC_UART1_ENABLED                0
 
 #define uC_TIMER0_ENABLED               0
 #define uC_TIMER1_ENABLED               1
@@ -119,15 +137,31 @@
 
 #define uC_TIMER2_TOP_IRQ_HANDLER       time_systick_handler
 
-#define uC_UART0_ENABLED                0
-#define uC_UART1_ENABLED                1
-#define uC_UART1_BAUD                   256000
-
 #define uC_SPI0_ENABLED                 0
 #define uC_SPI1_ENABLED                 1
 #define uC_SPI2_ENABLED                 0
 #define uC_SPI3_ENABLED                 0
 
+// BCIF based Hardware Configuration
+
+#if APP_ENABLE_BCIF
+#if APP_BCIFACE_USE_USBCDC
+
+#undef uC_USBCDC_ENABLED
+#define uC_USBCDC_ENABLED           1
+#define APP_BCIFACE_PROVIDER        2
+
+#else
+
+#undef uC_UART1_ENABLED
+#define uC_UART1_ENABLED            1
+#define uC_UART1_BAUD               256000
+#define uC_UART1_TXBUF_LEN          100
+#define APP_BCIFACE_PROVIDER        1
+
+#endif
+
+#endif
 
 #include "asp/hardware.h"
 #include "devicemap.h"

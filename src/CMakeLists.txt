@@ -18,3 +18,4 @@ SET(PROJECT_VERSION_TWEAK 0)
 INCLUDE(ebs/exe-conf)
 
 INSTALL(SCRIPT default-install.cmake)
+

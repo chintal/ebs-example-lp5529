@@ -2,6 +2,7 @@
 
 
 #include "time_if.h"
+#include "hal/uc/timer.h"
 
 uint16_t app_tm_init(uint16_t ucdm_address)
 {

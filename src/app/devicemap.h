@@ -44,7 +44,6 @@
 
 #include <ucdm/ucdm.h>
 
-#define DMAP_MAX_REGISTERS              64
 
 #define DMAP_MODBUS_BASE_ADDRESS        0
 #define DMAP_TIME_BASE_ADDRESS          2
